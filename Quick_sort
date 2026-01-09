@@ -20,4 +20,4 @@ low,high = 0,len(l)-1
 print(partition(l,low,high))
 print((quicksort(l,low,high)))
 
-    
+![image]() 
