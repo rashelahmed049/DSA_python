@@ -20,4 +20,4 @@ low,high = 0,len(l)-1
 print(partition(l,low,high))
 print((quicksort(l,low,high)))
 
-![image]() 
+![image_alt](https://github.com/rashelahmed049/DSA_python/blob/main/quick_sort.png?raw=true) 
