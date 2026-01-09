@@ -1,0 +1,23 @@
+def partition(l,low,high):
+    pivot = high
+    i = low - 1
+    j = low
+    for j in range(pivot):
+        if l[j] < l[pivot]:
+            i+=1
+            l[i],l[j] = l[j],l[i]
+    l[i+1],l[pivot] = l[pivot],l[i+1]
+    return i+1
+def quicksort(l,low,high):
+    if low < high:
+        pivot = partition(l,low,high)
+        quicksort(l,low,pivot-1)
+        quicksort(l,pivot+1,high)
+    return l
+        
+l = [2,12,6,17,3,8]
+low,high = 0,len(l)-1
+print(partition(l,low,high))
+print((quicksort(l,low,high)))
+
+    
