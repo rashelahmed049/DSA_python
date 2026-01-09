@@ -1,0 +1,16 @@
+def insertion_sort(l):
+    if len(l) == 0:
+        print("No elements in the list!")
+        return
+    for i in range(len(l)):
+        key = l[i]
+        j = i-1
+        while j >= 0 and l[j] > key:
+            l[j+1] = l[j]
+            j-=1
+        l[j+1] = key
+    return l
+            
+        
+l = [2,3,4,5,1]       
+print(insertion_sort(l))
