@@ -1,4 +1,6 @@
+import time
 def binary_search(l,target):
+    ct = time.time()
     if len(l) == 0:
         print("No elements in the list!")
         return 
@@ -13,7 +15,11 @@ def binary_search(l,target):
             high = mid - 1
         else:
             low = mid+1
+    ft = time.time()
+    print("Time taken in ms :", (ft - ct) * 1000)
     return "Target not found"
 l = [2,5,8,9]
+b = []
 print(binary_search(l,7))
+print(binary_search(b,7))
     
