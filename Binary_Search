@@ -1,0 +1,19 @@
+def binary_search(l,target):
+    if len(l) == 0:
+        print("No elements in the list!")
+        return 
+    low,high = 0, len(l)-1
+    a = sorted(l)
+    while low < high:
+        mid = (low + high) // 2
+        if target == a[mid]:
+            print("Found at position:",mid)
+            return
+        elif a[mid] > target:
+            high = mid - 1
+        else:
+            low = mid+1
+    return "Target not found"
+l = [2,5,8,9]
+print(binary_search(l,7))
+    
