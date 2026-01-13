@@ -41,7 +41,7 @@ class dl:
     def del_d(self,data):
         t = self.head
         if t.d == data:
-            self.head == self.head.next
+            self.head = self.head.next
             self.head.prev = None
         else:
             while t:
