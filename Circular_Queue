@@ -1,0 +1,34 @@
+class circular_queue:
+    def __init__(self,size):
+        self.lst = [None] * size
+        self.front = self.rear = -1
+        self.s = size
+    
+    def insert(self,data):
+        if self.front == self.rear == -1:
+            self.front = self.rear = 0
+            self.lst[self.rear] = data
+        elif  (self.rear + 1) % self.s == self.front:
+            print("Queue is full! cannot insert!")
+            return
+        else:
+            self.rear = (self.rear + 1) % self.s
+            self.lst[self.rear] = data
+    def disp(self):
+        if self.front == -1:
+            print("Queue is empty")
+            return
+    
+        i = self.front
+        while True:
+            print(self.lst[i])
+            if i == self.rear:
+                break
+            i = (i + 1) % self.s
+
+                
+c = circular_queue(5)
+c.insert(9)
+c.disp()
+                
+                
