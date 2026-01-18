@@ -6,4 +6,4 @@ Feel free to use my contribution. Anyone can comment and modify the code with be
 
 Thank you!!!
 
-![image_alt](https://github.com/rashelahmed049/DSA_python/blob/main/quick_sort.png?raw=true)
+![image_alt](https://github.com/rashelahmed049/DSA_python/blob/main/python.jpg?raw=true)
