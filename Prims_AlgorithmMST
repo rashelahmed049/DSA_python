@@ -1,0 +1,31 @@
+#Minimum spanning tree using Prims Algo
+import heapq
+def MST(graph,start = 0 ):
+    tc = 0 
+    hp = [(0,start,None)]
+    mst = []
+    visited = set()
+    
+    while hp:
+        weight,node,parent = heapq.heappop(hp)
+        if node in visited:
+            continue
+        visited.add(node)
+        if parent is not None:
+            mst.append((weight,node,parent))
+            tc += weight
+        for n,w in graph[node]:
+            if n not in visited:
+                heapq.heappush(hp,(w,n,node))
+    print("The flow of the MST is :", mst,"\nTotal cost is :",tc,end=" ")
+    
+graph = {
+    'A': [('B', 2), ('C', 3)],
+    'B': [('A', 2), ('C', 1), ('D', 4)],
+    'C': [('A', 3), ('B', 1), ('D', 5)],
+    'D': [('B', 4), ('C', 5)]
+}
+MST(graph,'A')
+   
+    
+        
