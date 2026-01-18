@@ -5,5 +5,6 @@ Once all the algo are covered,using these algo's will try to build real life app
 Feel free to use my contribution. Anyone can comment and modify the code with better approach..
 
 Thank you!!!
-
+![image_alt](https://github.com/rashelahmed049/DSA_python/blob/main/p2.png?raw=true)
+![image_alt](https://github.com/rashelahmed049/DSA_python/blob/main/dreams.jpg?raw=true)
 ![image_alt](https://github.com/rashelahmed049/DSA_python/blob/main/python.jpg?raw=true)
