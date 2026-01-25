@@ -1,0 +1,47 @@
+#height of a BST
+
+class node:
+    
+    def __init__(self,data):
+        self.data = data
+        self.left = None
+        self.right  = None
+        
+    def insert(self,data):
+        nw = node(data)
+        if self.data:
+            if data < self.data:
+                if self.left:
+                    self.left.insert(data)
+                else:
+                    self.left = nw
+            if data > self.data:
+                if self.right:
+                    self.right.insert(data)
+                else:
+                    self.right = nw
+        else:
+            self.data = nw
+            
+    def display(self):
+        if self.left:
+            self.left.display()
+        print(self.data)
+        if self.right:
+            self.right.display()
+
+    def get_height(self):
+        if self.data is None:
+            return 0
+        lh = self.left.get_height() if self.left else 0
+        rh = self.right.get_height() if self.right else 0
+        return 1 + max(lh,rh)
+            
+n = node(2)
+n.insert(80)
+n.insert(7)
+n.insert(9)
+n.insert(25)
+n.insert(37)
+n.display()
+print(n.get_height())
